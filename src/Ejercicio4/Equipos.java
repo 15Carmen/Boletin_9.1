@@ -1,16 +1,19 @@
 package Ejercicio4;
 
+enum Equipo {RECRE, BETIS, SEVILLA, CADIZ, MALAGA, VILLAREAL, MADRID, BARCELONA}
+
 public class Equipos {
 
     //Atributos
-    private String nombreEquipo= "";
+    //private String nombreEquipo= "";
+    private Equipo nombreEquipo;
     private int partidosJugados=0, golesMarcados=0, golesRecibidos=0,puntos=0;
 
     //constructor por defecto
     public Equipos(){}
 
     //constructor con parametros
-    public Equipos(String nombreEquipo, int partidosJugados, int golesMarcados, int golesRecibidos, int puntos) {
+    public Equipos(/*String nombreEquipo,*/ Equipo nombreEquipo, int partidosJugados, int golesMarcados, int golesRecibidos, int puntos) {
         this.nombreEquipo = nombreEquipo;
         this.partidosJugados = partidosJugados;
         this.golesMarcados = golesMarcados;
@@ -19,11 +22,19 @@ public class Equipos {
     }
 
     //Getter y setter
-    public String getNombreEquipo() {
+    /*public String getNombreEquipo() {
         return nombreEquipo;
     }
 
     public void setNombreEquipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
+    }*/
+
+    public Equipo getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public void setNombreEquipo(Equipo nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
 
